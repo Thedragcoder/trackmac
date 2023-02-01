@@ -116,7 +116,6 @@ def print_summary(samples):
 def run_profiler():
 	samples = []
 	while True:
-		activeAppName = NSWorkspace.sharedWorkspace().activeApplication()['NSApplicationName']
 		samples.append([int(time.time()), activeAppName])
 		print_summary(samples)
 		time.sleep(sample_interval)
